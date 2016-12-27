@@ -22,7 +22,7 @@ Chef Automate release 0.6.0 includes a new SSH-based job execution layer. Under 
 Job Dispatch and Push Jobs
 -----------------------------------------------------
 
-Any project configured to use Job Dispatch will not use Push Jobs as the transport mechanism for managing the phase builds (unit, lint, provision, etc.) on runner nodes. Push Jobs is still required to execute the `delivery_push_job` resource that the delivery-sugar cookbook exposes. This means that if you use the default `deploy.rb  <https://github.com/chef-cookbooks/delivery-truck/blob/b9e386e720376f7f3173ca03311cba667eb7ef4b/recipes/deploy.rb>`__ recipe from delivery-truck then Push Jobs is still used within the deploy phase.
+Any project configured to use Job Dispatch will not use Push Jobs as the transport mechanism for managing the phase builds (unit, lint, provision, etc.) on runner nodes. Push Jobs is still required to execute the ``delivery_push_job`` resource that the delivery-sugar cookbook exposes. This means that if you use the default `deploy.rb  <https://github.com/chef-cookbooks/delivery-truck/blob/b9e386e720376f7f3173ca03311cba667eb7ef4b/recipes/deploy.rb>`__ recipe from delivery-truck then Push Jobs is still used within the deploy phase.
 
 Job Dispatch is not a replacement for Push Jobs. Job Dispatch is a targeted solution for managing phase builds and Push Jobs allows users to perform remote tasks on pools of nodes. Job Dispatch uses SSH connections and allows additional features, such as cancelling jobs. 
 
